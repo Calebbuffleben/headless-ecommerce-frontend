@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import 'tailwindcss/tailwind.css';
 
 const mockedProducts = [
   {
@@ -80,11 +82,11 @@ export default function Home() {
                     <h2 className="text-xl font-bold mb-2">{product.title}</h2>
                     <p className="text-gray-600 mb-4">{product.description}</p>
                     <p className="text-lg font-bold text-blue-500 mb-4">${product.price.toFixed(2)}</p>
-                    <button
-                    className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
-                    >
-                    Buy Now
-                    </button>
+                    <Link href={`/product/${product.id}`}>
+                        <div className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300">
+                        View Product
+                        </div>
+                    </Link>
                 </div>
                 ))}
             </div>
