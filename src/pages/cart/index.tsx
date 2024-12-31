@@ -49,6 +49,7 @@ const CartPage = () => {
         ContentOgTitle="Your Cart - E-commerce"
         ContentOgDescription="View and manage items in your shopping cart."
         ContentType="website"
+        PageTitle="Your Cart"
       />
       <Layout>
         <div className="max-w-4xl mx-auto py-8 px-4">

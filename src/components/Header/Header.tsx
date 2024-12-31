@@ -5,10 +5,11 @@ const Header = ({
     ContentRobots, 
     ContentOgTitle, 
     ContentOgDescription, 
-    ContentType 
+    ContentType,
+    PageTitle,
 }: any) => (
     <Head>  
-        <title>Your Cart - E-commerce</title>
+        <title>{`${PageTitle} - E-commerce`}</title>
         <meta name="description" content={ContentDescription} />
         <meta name="robots" content={ContentRobots} />
         <meta property="og:title" content={ContentOgTitle} />
