@@ -37,7 +37,6 @@ export default function Home() {
   return (
     <div className="font-sans">
         <Layout>
-
             {/* Hero Section */}
             <section className="bg-blue-500 text-white py-16 text-center">
                 <h1 className="text-4xl font-bold">Welcome to Our E-commerce Store</h1>
