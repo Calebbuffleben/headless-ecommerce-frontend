@@ -2,23 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
 import 'tailwindcss/tailwind.css';
 import Header from '@/components/Header/Header';
-
-const mockedCartItems = [
-  {
-    id: 1,
-    title: 'Product 1',
-    price: 29.99,
-    quantity: 1,
-    image: 'https://cdn.pixabay.com/photo/2020/09/23/20/28/headphones-5596990_1280.jpg',
-  },
-  {
-    id: 2,
-    title: 'Product 2',
-    price: 39.99,
-    quantity: 2,
-    image: 'https://cdn.pixabay.com/photo/2020/09/23/20/28/headphones-5596990_1280.jpg',
-  },
-];
+import { mockedCartItems } from '@/mocks/Items';
 
 const CheckoutPage = () => {
   const [cart, setCart] = useState(mockedCartItems);
