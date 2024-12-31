@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import 'tailwindcss/tailwind.css';
+import Layout from '@/components/Layout/Layout';
 
 const mockedProducts = [
   {
@@ -42,27 +43,29 @@ export default function ProductPage() {
   }
 
   return (
-    <div className="font-sans">
-      <div className="max-w-4xl mx-auto py-8 px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          <img
-            src={product.image}
-            alt={product.title}
-            className="w-full max-w-sm rounded-lg shadow-lg"
-          />
-          <div className="md:ml-8 mt-6 md:mt-0">
-            <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
-            <p className="text-gray-700 mb-4">{product.description}</p>
-            <p className="text-xl font-bold text-blue-500">${product.price.toFixed(2)}</p>
+    <Layout>
+      <div className="font-sans">
+        <div className="max-w-4xl mx-auto py-8 px-4">
+          <div className="flex flex-col md:flex-row items-center">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-full max-w-sm rounded-lg shadow-lg"
+            />
+            <div className="md:ml-8 mt-6 md:mt-0">
+              <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
+              <p className="text-gray-700 mb-4">{product.description}</p>
+              <p className="text-xl font-bold text-blue-500">${product.price.toFixed(2)}</p>
+            </div>
           </div>
+          <button
+            onClick={() => router.push('/')}
+            className="mt-6 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
+          >
+            Back to Home
+          </button>
         </div>
-        <button
-          onClick={() => router.push('/')}
-          className="mt-6 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
-        >
-          Back to Home
-        </button>
       </div>
-    </div>
+    </Layout>
   );
 }
