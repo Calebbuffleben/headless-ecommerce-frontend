@@ -7,7 +7,7 @@ import { mockedCartItems } from '@/mocks/Items';
 const CheckoutPage = () => {
   const [cart, setCart] = useState(mockedCartItems);
 
-  const handleQuantityChange = (id, quantity) => {
+  const handleQuantityChange = (id: number, quantity: number) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
         item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
