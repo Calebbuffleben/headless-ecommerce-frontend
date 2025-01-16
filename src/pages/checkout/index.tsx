@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
-import 'tailwindcss/tailwind.css';
 import Header from '@/components/Header/Header';
 import { mockedCartItems } from '@/mocks/Items';
+
+import 'tailwindcss/tailwind.css';
 
 const CheckoutPage = () => {
   const [cart, setCart] = useState(mockedCartItems);
